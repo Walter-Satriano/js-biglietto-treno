@@ -22,11 +22,11 @@ fullPriceticket = 0.21 * km;
 console.log(fullPriceticket);
 
 // Prezzo biglietto con applicazione sconto 20%
-discount20 = Math.round(fullPriceticket - (fullPriceticket * (20 / 100)));
+discount20 = (fullPriceticket - (fullPriceticket * (20 / 100)));
 console.log(discount20);
 
 //Prezzo biglietto con applicazione sconto 40%
-discount40 = Math.round(fullPriceticket - (fullPriceticket * (40 / 100)));
+discount40 = (fullPriceticket - (fullPriceticket * (40 / 100)));
 console.log(discount40);
 
 // Verifico che le scontistiche vengano applicate correttamente
@@ -43,14 +43,4 @@ if (age > 65) {
 }
 
 // Stampo il prezzo finale del biglietto considerando le scontistiche
-if (risultato === discount20) {
-  elemento.innerHTML = "Il prezzo totale del biglietto è: " + discount20 + " €";
-}
-
-if (risultato === fullPriceticket) {
-  elemento.innerHTML = "Il prezzo totale del biglietto è: " + fullPriceticket + " €";
-}
-
-if (risultato === discount40) {
-  elemento.innerHTML = "Il prezzo totale del biglietto è: " + discount40 + " €";
-}
+elemento.innerHTML = "Il prezzo totale del biglietto è: " + risultato.toFixed(2) + " €";
